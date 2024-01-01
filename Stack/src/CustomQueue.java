@@ -1,4 +1,4 @@
-import static sun.util.locale.LocaleUtils.isEmpty;
+
 
 public class CustomQueue {
     private int[] data;
