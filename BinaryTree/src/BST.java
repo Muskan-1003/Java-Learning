@@ -53,4 +53,18 @@ public class BST {
         display(node.left, "Left child of " + node.getValue() + ": ");
         display(node.right, "Right child of " + node.getValue() + ": ");
     }
+
+
+    public boolean balanced() {
+        return balanced(root);
+    }
+
+    private boolean balanced(Node node) {
+        if (node == null) {
+            return true;
+        }
+        return Math.abs(height(node.left) - height(node.right)) <= 1 && balanced(node.left) && balanced(node.right);
+    }
+
+
 }
