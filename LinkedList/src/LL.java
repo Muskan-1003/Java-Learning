@@ -47,6 +47,7 @@ public class LL {
         }
         node.next=insertRec(val,index-1,node.next);
 
+        return node;
     }
 
 
