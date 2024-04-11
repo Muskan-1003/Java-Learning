@@ -2,7 +2,7 @@ package com.muskan;
 
 import java.util.Scanner;
 
-public class Palindrome {
+public class xPalindrome {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         System.out.print("Please provide string :");
@@ -20,6 +20,21 @@ public class Palindrome {
         }else {
             System.out.println(org_str + " is not a palindrome");
         }
+///best solution
+
+//        class Solution {
+//            int isPalindrome(String S) {
+//                int len = S.length();
+//                for (int i = 0; i < len / 2; i++) {
+//                    // Compare characters from the start and end of the string
+//                    if (S.charAt(i) != S.charAt(len - 1 - i)) {
+//                        return 0; // Not a palindrome
+//                    }
+//                }
+//                return 1; // Palindrome
+//            }
+//        }
+
 
     }
 }
