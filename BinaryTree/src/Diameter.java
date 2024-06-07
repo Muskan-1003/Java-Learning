@@ -1,8 +1,8 @@
 public class Diameter {
     public class TreeNode {
         int val;
-        LowestCommonAncestorBinaryTree.TreeNode left;
-        LowestCommonAncestorBinaryTree.TreeNode right;
+        TreeNode left;
+        TreeNode right;
         TreeNode(int x) { val = x; }
     }
 
