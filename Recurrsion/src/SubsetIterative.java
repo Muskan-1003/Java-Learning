@@ -31,5 +31,32 @@ public class SubsetIterative {
         return outer;
     }
 
+    //recurrsively
+
+    //2^N -->tc
+    class Solution {
+        public List<List<Integer>> subsets(int[] arr) {
+            //recurssively
+            List<List<Integer>> res = new ArrayList<>();
+            List<Integer> subset = new ArrayList<>();
+
+            sub(arr, 0, res, subset);
+            return res;
+
+        }
+        private void sub(int[] arr,int index,List<List<Integer>> res,List<Integer> subset ){
+            if(index==arr.length){
+                res.add(new ArrayList<>(subset));
+                return;
+            }
+            subset.add(arr[index]);
+            sub(arr,index+1,res,subset);//accept
+
+            subset.remove(subset.size()-1);
+            sub(arr,index+1,res,subset);//reject
+        }
+
+
+    }
 
 }
